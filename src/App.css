@@ -1,7 +1,8 @@
 body {
     padding: 30px;
-    font-family: Arial;
-    background-image: url("./img/todo-list-bg2.jpg");
+    font-family: Verdana;
+    background-image: url("./img/todo-list-bg.jpg");
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-color: #f4f4f4;
@@ -15,6 +16,7 @@ body {
     background-color: #efefef;
     padding: 20px 30px;
     border-radius: 10px;
+    
 }
 
 h1 {
@@ -23,6 +25,7 @@ h1 {
 
 h3 {
     margin-bottom: 10px;
+    border-bottom: 1px solid #000;
 }
 
 p {
@@ -37,6 +40,7 @@ button {
     background-color: #242483;
     color: #fff;
     padding: 5px 10px;
+    margin-right: 5px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -46,6 +50,36 @@ button {
 
 button:hover {
     opacity: 1;
+}
+
+.side-buttons {
+    display: flex;
+    word-wrap: break-word;
+
+}
+
+.todo-list {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #000;
+}
+
+.todo {
+    background-color: #ffffffa8;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.15);
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: 0.1s;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.todo:hover {
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+    background-color: #fff;
 }
 
 .complete {
@@ -66,4 +100,10 @@ input, select {
     border: 1px solid #ddd;
     border-radius: 3px;
     width: 100%;
+}
+
+.content {
+    word-wrap: break-word;
+    width: 80%;
+    padding: auto;
 }

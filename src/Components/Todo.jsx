@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Todo({ todo }) {
+export default function Todo({ todo, removeTodo }) {
     
   return (
     <div className="todo">
@@ -8,9 +8,15 @@ export default function Todo({ todo }) {
             <p>{todo.text}</p>
             <p className="category">({todo.category})</p>
         </div>
-        <div>
-            <button className='complete'>Done</button>
-            <button className='remove'>X</button>
+        <div className="side-buttons">
+            <button className="complete">
+                Done
+            </button>
+            <button 
+                className="remove" 
+                onClick={() => removeTodo(todo.id)}>
+                x
+            </button>
         </div>
     </div>
   )
