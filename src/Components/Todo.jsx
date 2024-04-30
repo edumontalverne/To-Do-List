@@ -1,24 +1,27 @@
 import React from 'react'
 
-export default function Todo({ todo, removeTodo }) {
+export default function Todo({ todo, removeTodo, completeTodo }) {
     
   return (
     <div className="todo">
         <div className="content">
-            <p>{todo.text}</p>
-            <p className="category">({todo.category})</p>
+            <p className="category">{todo.category}:</p>
+            <p style={{textDecoration: todo.isCompleted ? "line-through" : ""}}>
+                {todo.text}
+            </p>
         </div>
         <div className="side-buttons">
-            <button className="complete">
-                Done
+            <button 
+                className="complete"
+                onClick={() => completeTodo(todo.id)}>
+                    Done
             </button>
             <button 
                 className="remove" 
                 onClick={() => removeTodo(todo.id)}>
-                x
+                    x
             </button>
         </div>
     </div>
   )
 }
-

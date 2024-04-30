@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function TodoForm({addTodo}) {
+export default function TodoForm({ addTodo }) {
 
     const [ title, setTitle] = useState("");
     const [ category, setCategory ] = useState("");
